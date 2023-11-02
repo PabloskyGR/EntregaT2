@@ -2,143 +2,183 @@ package condicionales;
 
 import java.util.Scanner;
 
+		/**
+		 * PRUEBAS
+		 * 
+		 * 1. Valor Introducido: 7
+		 * Respuesta Esperada: El número es siete
+		 * Respuesta Final: El número es siete
+		 * 
+		 * 2. Valor Introducido: 15
+		 * Respuesta Esperada: El número es quince
+		 * Respuesta Final: El número es quince
+		 * 
+		 * 3. Valor Introducido: 29
+		 * Respuesta Esperada: El número es veintinueve
+		 * Respuesta Final: El número es veintinueve
+		 * 
+		 * 4. Valor Introducido: 45
+		 * Respuesta Esperada: El número es cuarenta y cinco
+		 * Respuesta Final: El número es cuarenta y cinco
+		 * 
+		 * 5. Valor Introducido: 20
+		 * Respuesta Esperada: El número es veinte
+		 * Respuesta Final: El número es veinte
+		 * 
+		 * 6. Valor Introducido: 100
+		 * Respuesta Esperada: Error, número no válido
+		 * Respuesta Final: Error, número no válido
+		 * 
+		 **/
+
 public class Ejercicio4 {
 	
 	public static void main(String[] args) {
 		
-		// Creamos la variable donde guardaremos los datos introduccidos
+		// Abrimos el scanner
+		Scanner sc = new Scanner(System.in); 
+		
+		// Variable donde guardaremos el número del usuario
 		int num;
-		// Creamos la variable donde guardaremos los numeros escritos
-		String unid;
-		String numletra = null;
+		
+		// Variable donde guardaremos los números del 0 al 9 en letras
+		String sufijo;
+		
+		// Variable donde guadaremos en caso de ser mayor de 10, los prefijos
+		String prefijo = null;
 
-		Scanner sc = new Scanner(System.in); // Creamos el objeto Scanner
+		// Le pedimos al usuario un número del 1 al 99
+		System.out.println("Dime un número entre el 1 y 99:");
+		num = sc.nextInt();
 
-		// Se le pide al usuario que introduzca un numero entre 1 y 99
-		System.out.println("Escriba un numero entre 1 y 99");
-		num = sc.nextInt();// El valor es guardado en la variable
-
-		// Mediante una condicional comprobamos que este en el rango definido.
+		// Comprobamos que el número sea válido
 		if (num >= 100 || num < 1) {
-			System.out.println("El numero no esta comprendido entre 1 y 99");
-			// Cuando se esta en el rango, continua el programa
+			System.err.println("Error, número no válido");
 		} else {
-			// Con este switch averiguamos las unidades
-			switch (num % 10) {
+			switch (num % 10) { // Comprobamos el resto al dividirlo entre 10 para comprobar cual es el 2 dígito
 			case 1 -> {
-				unid = "uno";
+				sufijo = "uno";
 			}
 			case 2 -> {
-				unid = "dos";
+				sufijo = "dos";
 			}
 			case 3 -> {
-				unid = "tres";
+				sufijo = "tres";
 			}
 			case 4 -> {
-				unid = "cuatro";
+				sufijo = "cuatro";
 			}
 			case 5 -> {
-				unid = "cinco";
+				sufijo = "cinco";
 			}
 			case 6 -> {
-				unid = "seis";
+				sufijo = "seis";
 			}
 			case 7 -> {
-				unid = "siete";
+				sufijo = "siete";
 			}
 			case 8 -> {
-				unid = "ocho";
+				sufijo = "ocho";
 			}
 			case 9 -> {
-				unid = "nueve";
+				sufijo = "nueve";
 			}
 			default -> {
-				unid = "cero";
+				sufijo = "cero";
 			}
-			} // Si el numero es menor a 10, se devuelve como valor escrito del numero las
-			// unidades
-			if (num < 10) {
-				System.out.println("El numero es " + unid);
-			} else { // Si el numero es mayor a 10, el programa continua
-				// Con este switch sacamos las decenas del numero
-				switch (num / 10) {
+			} 
+			if (num < 10) { // En caso de que el número no sea mayor de 10 mostramos el número en letras
+				System.out.println("El número es " + sufijo);
+			} else { 
+				switch (num / 10) { // Dividimos entre 10 para comprobar el primer dígito y saber el prefijo correcto
 				case 1 -> {
-					numletra = "dieci";
+					prefijo = "dieci";
 				}
 				case 2 -> {
-					numletra = "veinti";
+					prefijo = "veinti";
 				}
 				case 3 -> {
-					numletra = "treinta";
+					prefijo = "treinta";
 				}
 				case 4 -> {
-					numletra = "cuarenta";
+					prefijo = "cuarenta";
 				}
 				case 5 -> {
-					numletra = "cincuenta";
+					prefijo = "cincuenta";
 				}
 				case 6 -> {
-					numletra = "sesenta";
+					prefijo = "sesenta";
 				}
 				case 7 -> {
-					numletra = "setenta";
+					prefijo = "setenta";
 				}
 				case 8 -> {
-					numletra = "ochenta";
+					prefijo = "ochenta";
 				}
 				case 9 -> {
-					numletra = "noventa";
+					prefijo = "noventa";
 				}
 				}
-				/*
-				 * con una condicional y un switch ofrecemos como resultado del 11 al 15
-				 */
-				if (10 < num && num <= 15) {
+				
+				if (10 < num && num <= 15) { // Como del 11 al 15 no tienen un prefijo predeterminado ponemos el nombre del número en letras
 					switch (num) {
 					case 11 -> {
-						numletra = "once";
+						prefijo = "once";
 					}
 					case 12 -> {
-						numletra = "doce";
+						prefijo = "doce";
 					}
 					case 13 -> {
-						numletra = "trece";
+						prefijo = "trece";
 					}
 					case 14 -> {
-						numletra = "catorce";
+						prefijo = "catorce";
 					}
 					case 15 -> {
-						numletra = "quince";
+						prefijo = "quince";
 					}
 					}
-					System.out.println("El numero es " + numletra);
+					System.out.println("El número es " + prefijo); 
 				}
-				/*
-				 * una vez descartados los numeros anteriores, para los numeros inferiores a 30
-				 * se muestra el resultado sin "y"
-				 */
+				
+				/**
+				 * 
+				 *  Para escribirlo gramaticalmente correcto comprobamos si es un número comprendido entre 16 y 29, ya que 
+				 *  esos números no tienen  una 'y' en medio, exceptuando el Veinte
+				 *  
+				 **/
+				
 				if (num > 15 && num != 20 && num < 30) {
-					System.out.println("El numero es " + numletra + unid);
+					System.out.println("El número es " + prefijo + sufijo);
 				}
-				// Para el resto se añade el "y"
+				
+				/**
+				 *
+				 * Todos los números del 30 al 99 tienen 'y' en medio exceptuando los que acaban en 0,
+				 * por lo que mostramos el prefijo y su sufijo final con 'y' en medio
+				 * 
+				 **/
 				if (num > 30 && num % 10 != 0) {
-					System.out.println("El numero es " + numletra + " y " + unid);
+					System.out.println("El número es " + prefijo + " y " + sufijo);
 				}
-				/*
-				 * En caso que el numero sea multiplo de 10, se varia algunos valores en caso
-				 * del 10 y el 20 y se ofrece el resultado
-				 */
+			
+				// Ya que los que acaben en 0 no necesitan de sufijo, solo pondremos su prefijo 
 				if (num % 10 == 0) {
+					
+					// Excepto el 10 que tiene su propia forma
 					if (num == 10) {
-						numletra = "diez";
+						prefijo = "diez";
 					}
+					// Y excepto el 20 que tiene su forma
 					if (num == 20) {
-						numletra = "veinte";
+						prefijo = "veinte";
 					}
-					System.out.println("El numero es " + numletra);
+					System.out.println("El número es " + prefijo);
 				}
 			}
 		}
-		sc.close(); // Cerramos el objeto Scanner
+		
+		// Cerramos el scanner
+		sc.close(); 
 	}
 }

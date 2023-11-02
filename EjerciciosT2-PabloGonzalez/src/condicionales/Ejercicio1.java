@@ -2,6 +2,27 @@ package condicionales;
 
 import java.util.Scanner;
 
+		/**
+		 * PRUEBAS
+		 * 
+		 * 1. Valor introducido: 12321
+		 * Respuesta esperada: El número 12321 = 12321 --> Es capicúa
+		 * Respuesta final: El número 12321 = 12321 --> Es capicúa
+		 * 
+		 * 2. Valor introducido: 45678
+		 * Respuesta esperada: El número 45678 != 87654 --> No es capicúa
+		 * Respuesta final: El número 45678 != 87654 --> No es capicúa
+		 * 
+		 * 3. Valor Introducido: -5
+		 * Respuesta esperada: El número introducido no es válido
+		 * Respuesta final: El número introducido no es válido
+		 * 
+		 * 4. Valor Introducido: 123456
+		 * Respuesta esperada: El número introducido no es válido
+		 * Respuesta final: El número introducido no es válido
+		 * 
+		 **/
+
 public class Ejercicio1 {
 
 	public static void main(String[] args) {

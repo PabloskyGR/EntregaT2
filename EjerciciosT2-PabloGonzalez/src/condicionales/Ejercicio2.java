@@ -2,6 +2,27 @@ package condicionales;
 
 import java.util.Scanner;
 
+		/**
+		 * PRUEBAS
+		 * 
+		 * 1. Valor Introducido: 12345678
+		 * Respuesta Esperada: La letra es la Z.
+		 * Respuesta Final: La letra es la Z.
+		 * 
+		 * 2. Valor Introducido: 98765432
+		 * Respuesta Esperada: La letra es la M.
+		 * Respuesta Final: La letra es la M.
+		 * 
+		 * 3. Valor Introducido: 1234
+		 * Respuesta Esperada: DNI introducido no válido
+		 * Respuesta Final: DNI introducido no válido
+		 * 
+		 * 4. Valor Introducido: 100000000
+		 * Respuesta Esperada: DNI introducido no válido
+		 * Respuesta Final: DNI introducido no válido
+		 *  
+		 **/
+
 public class Ejercicio2 {
 
 	public static void main(String[] args) {
