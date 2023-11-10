@@ -1,5 +1,6 @@
 package bucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio6 {
@@ -10,14 +11,20 @@ public class Ejercicio6 {
 		Scanner sc = new Scanner(System.in);
 		
 		// Variable donde guardaremos el número que introduzca el usuario
-		int num;
+		int num = -1;
 		
-		// Le pedimos al usuario un número comprendido entre 0 y 20
-		System.out.println("Dime un número entre 0 y 20:");
-		num = sc.nextInt();
-		
-		// Comprobamos si el número esta comprendido entre 0 y 20
-		if(num >= 0 && num <=20) {
+		// Le pediremos siempre un número hasta que sea un número entre 0 y 20
+		do {
+			// Usamos el try-catch para mostrar un mensaje en caso de que el valor introducido no sea del tipo adecuado
+			try {
+				// Le pedimos al usuario un número comprendido entre 0 y 20
+				System.out.println("Dime un número entre 0 y 20:");
+				num = sc.nextInt();
+			}catch(InputMismatchException e) {
+				System.out.println("Error, valor no válido");
+				sc.nextLine();
+			}
+		} while (num <= 0 || num >=20);
 			
 	    // Usamos el bucle for para calcular el número de filas que necesitaremos dependendiendo de "num"
 		for(int i = 1; i <= num; i++) {
@@ -28,10 +35,6 @@ public class Ejercicio6 {
 			// Salto de linea al final, para poder ponerlo de forma estructurada
 			System.out.println();
 		} 
-		} else {
-			// En caso de que "num" no sea válido, mostramos un mensaje de error
-			System.err.println("Error, número no válido"); 
-		}
 		
 		// Cerramos el scanner
 		sc.close();

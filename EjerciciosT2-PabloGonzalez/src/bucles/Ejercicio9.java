@@ -1,5 +1,6 @@
 package bucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio9 {
@@ -10,28 +11,31 @@ public class Ejercicio9 {
 		Scanner sc = new Scanner(System.in);
 		
 		// Variable donde guardamos el número que introduzca el usuario
-		int num;
+		int num = -1;
 		
 		// Variable donde se guardará el número de cifras que tiene el número
 		int cont = 0;
 		
-		// Le pedimos al usuario un número mayor a 0
-		System.out.println("Dime un número mayor a 0");
-		num = sc.nextInt();
-		
-		// Comprobamos que el número sea mayor a 0
-		if(num > 0) {
-			// Con el bucle vamos mirando dígito a dígito hasta que i sea mayor que num y ya sabremos cuantos dígitos tiene mediante el cont
-			for(int i = 1; i <= num; i *= 10) {
-				cont++;
+		// Pedimos un número hasta que el número sea mayor a 0
+		do {
+			// Usamos el try-catch para mostrar un mensaje en el caso de que el valor introducido no sea correcto
+			try {
+				// Le pedimos al usuario un número mayor a 0
+				System.out.println("Dime un número mayor a 0");
+				num = sc.nextInt();
+			}catch(InputMismatchException e) {
+				System.out.println("Error, valor no válido");
+				sc.nextLine();
 			}
-			
-			// Mostramos un mensaje con el número de dígitos
-			System.out.println("El número " + num + " tiene " + cont + " dígitos");
-		} else {
-			// En caso de ser 0 o menor mostramos un mensaje de error
-			System.err.println("Error, número no válido");
+		} while(num < 0);
+	
+		// Con el bucle vamos mirando dígito a dígito hasta que i sea mayor que num y ya sabremos cuantos dígitos tiene mediante el cont
+		for(int i = 1; i <= num; i *= 10) {
+			cont++;
 		}
+			
+		// Mostramos un mensaje con el número de dígitos
+		System.out.println("El número " + num + " tiene " + cont + " dígitos");
 		
 		// Cerramos el scanner
 		sc.close();

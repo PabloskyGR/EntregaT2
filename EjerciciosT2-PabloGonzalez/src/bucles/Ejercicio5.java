@@ -1,5 +1,6 @@
 package bucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio5 {
@@ -10,27 +11,41 @@ public class Ejercicio5 {
 		Scanner sc = new Scanner(System.in);
 				
 		// Variables donde guardaremos el número 1 y el número 2 que introduzca el usuario
-		int num1, num2;
-				
-		// Le pedimos al usuario que introduzca dos números 
-		System.out.println("Dime dos números:");
-		num1 = sc.nextInt();
-		num2 = sc.nextInt();
-				
-		// Comprobamos que los números introducidos sean correctos
-		if(num1 > 0 && num2 > 0) {
-					
-			// Usamos el bucle for para ir recorriendo desde el número mayor hacia alante
-			for(int i = Math.max(num1, num2); i >= Math.min(num1, num2); i++) {
-				if(i % num1 == 0 && i % num2 == 0) { // Buscamos el número que al dividir el número que buscamos entre num1 y num2, de resto 0
-					System.out.println("El MCM de los dos números es: " + i); // Mostramos el mensaje de cual es el MCM 
-					break; // Usamos el break para salir del bucle ya que tenemos el número que buscabamos
-				}
+		int num1 = -1, num2 = -1;
+		
+		// Pedimos el num1 hasta que se nos introduzca el valor del tipo deseado
+		do {
+			// Usamos el try-catch por si el usuario introduce un valor a num1 del tipo no deseado
+			try {
+				// Le pedimos al usuario que introduzca un número
+				System.out.println("Dime un número:");
+				num1 = sc.nextInt();
+			}catch(InputMismatchException e){
+				System.out.println("Error, valor no válido");
+				sc.nextLine();
 			}
-		} else { // En caso de que los números no sean válidos mostramos un mensaje de error
-			System.err.println("Error, números no válidos");
-		}
+		} while(num1 < 0);
+		
+		// Pedimos el num2 hasta que se nos introduzca el valor del tipo deseado
+		do {
+			// Usamos el try-catch por si el usuario introduce un valor a num2 del tipo no deseado
+			try {
+				// Le pedimos al usuario que introduzca otro número
+				System.out.println("Dime otro número:");
+				num2 = sc.nextInt();
+			}catch(InputMismatchException e){
+				System.out.println("Error, valor no válido");
+				sc.nextLine();
+			}
+		} while(num2 < 0);
 				
+		// Usamos el bucle for para ir recorriendo desde el número mayor hacia alante
+		for(int i = Math.max(num1, num2); i >= Math.min(num1, num2); i++) {
+			if(i % num1 == 0 && i % num2 == 0) { // Buscamos el número que al dividir el número que buscamos entre num1 y num2, de resto 0
+				System.out.println("El MCM de los dos números es: " + i); // Mostramos el mensaje de cual es el MCM 
+				break; // Usamos el break para salir del bucle ya que tenemos el número que buscabamos
+			}
+		}
 		// Cerramos el scanner
 		sc.close();
 

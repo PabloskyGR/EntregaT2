@@ -6,7 +6,7 @@ public class Ejercicio8 {
 
 	public static void main(String[] args) {
 		
-		// Abrimos el scanner
+		// Abrimos el scanner 
 		Scanner sc = new Scanner(System.in);
 		
 		// Variable donde gaurdaremos el número que vaua introduciendo el usuario
