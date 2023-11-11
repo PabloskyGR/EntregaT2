@@ -4,6 +4,29 @@ import java.time.LocalTime;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+		/**
+		 * PRUEBAS
+		 * 
+		 * 1. Valor introducido: hora = f, min = 5, seg = 5, incremento = 5
+		 * Respuesta esperada: El dato introducido no es correcto
+		 * 					   Dime la cantidad de horas:
+		 * Respuesta final: El dato introducido no es correcto
+		 * 					Dime la cantidad de horas:
+		 * 
+		 * 2. Valor introducido: hora = 5, min = 5, seg = 59, incremento = 1
+		 * Respuesta esperada: 05:06:00
+		 * Respuesta final: 05:06:00
+		 * 
+		 * 3. Valor introducido: hora = 5, min = 59, seg = 59, incremento = 1
+		 * Respuesta esperada: 06:00:00
+		 * Respuesta final:
+		 * 
+		 * 4. Valor introducido: hora = 23, min = 59, seg = 59, incremento = 1
+		 * Respuesta esperada: 00:00:00
+		 * Respuesta final: 00:00:00
+		 * 
+		 **/
+
 public class Ejercicio1 {
 
 	public static void main(String[] args) {

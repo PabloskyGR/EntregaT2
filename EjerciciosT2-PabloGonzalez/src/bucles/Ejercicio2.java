@@ -3,6 +3,21 @@ package bucles;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+		/**
+		 * PRUEBAS
+		 * 
+		 * 1. Valor introducido: f
+		 * Respuesta esperada: Error, valor no válido
+		 * 					   Dime un número: 
+		 * Respuesta final: Error, valor no válido
+		 * 					Dime un número: 
+		 * 
+		 * 2. Valor introducido: 10
+		 * Respuesta esperada: Hay entre 1 y 10 un total de 4 números primos
+		 * Respuesta final: Hay entre 1 y 10 un total de 4 números primos
+		 * 
+		 **/
+
 public class Ejercicio2 {
 
 	public static void main(String[] args) {

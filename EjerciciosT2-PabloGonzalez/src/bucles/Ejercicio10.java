@@ -1,12 +1,24 @@
 package bucles;
 
-import java.util.InputMismatchException;
+import java.util.InputMismatchException; 
 import java.util.Scanner;
 
 		/**
 		 * PRUEBAS
 		 * 
+		 * 1. Valor introducido: f
+		 * Respuesta esperada: Error, valor no válido
+		 *					   Dime un número mayor a 0
+		 * Respuesta final: Error, valor no válido
+		 *					Dime un número mayor a 0
 		 * 
+		 * 2. Valor introducido: 12321
+		 * Respuesta esperada: El número 12321 es capicúa --> 12321
+		 * Respuesta final: El número 12321 es capicúa --> 12321
+		 * 
+		 * 3. Valor introducido: 12345
+		 * Respuesta esperada: El número 12345 no es capicúa --> 54321
+		 * Respuesta final: El número 12345 no es capicúa --> 54321
 		 * 
 		 **/
 

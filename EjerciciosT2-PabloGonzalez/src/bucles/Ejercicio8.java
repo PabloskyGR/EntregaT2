@@ -2,6 +2,17 @@ package bucles;
 
 import java.util.Scanner;
 
+		/**
+		 * PRUEBAS
+		 * 
+		 * 1. Valor introducido: 4, 5, 6, 5, 4, 0
+		 * Respuesta esperada: Total de números introducidos: 5
+		 *					   Números fallados: 2
+		 * Respuesta final: Total de números introducidos: 5
+		 *					Números fallados: 2
+		 *
+		 **/
+
 public class Ejercicio8 {
 
 	public static void main(String[] args) {

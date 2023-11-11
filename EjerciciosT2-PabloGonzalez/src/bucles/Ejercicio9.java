@@ -1,7 +1,22 @@
 package bucles;
 
-import java.util.InputMismatchException;
+import java.util.InputMismatchException; 
 import java.util.Scanner;
+
+		/**
+		 * PRUEBAS
+		 * 
+		 * 1. Valor introducido: f
+		 * Respuesta esperada: Error, valor no válido
+		 *					   Dime un número mayor a 0
+		 * Respuesta final: Error, valor no válido
+		 *					Dime un número mayor a 0
+		 * 
+		 * 2. Valor introducido: 5453
+		 * Respuesta esperada: El número 5453 tiene 4 dígitos
+		 * Respuesta final: El número 5453 tiene 4 dígitos
+		 * 
+		 **/
 
 public class Ejercicio9 {
 

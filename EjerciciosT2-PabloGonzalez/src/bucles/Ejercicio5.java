@@ -1,7 +1,22 @@
 package bucles;
 
-import java.util.InputMismatchException;
+import java.util.InputMismatchException; 
 import java.util.Scanner;
+
+		/**
+		 * PRUEBAS
+		 * 
+		 * 1. Valor introducido: num1 = f, num2 = 2
+		 * Respuesta esperada: Error, valor no válido
+		 *					   Dime un número:
+		 * Respuesta final: Error, valor no válido
+		 *					Dime un número:
+		 * 
+		 * 2. Valor introducido: num1 = 6, num2 = 8
+		 * Respuesta esperada: El MCM de los dos números es: 24
+		 * Respuesta final: El MCM de los dos números es: 24
+		 * 
+		 **/
 
 public class Ejercicio5 {
 

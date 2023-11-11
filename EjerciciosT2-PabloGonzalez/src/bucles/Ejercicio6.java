@@ -1,7 +1,34 @@
 package bucles;
 
-import java.util.InputMismatchException;
+import java.util.InputMismatchException; 
 import java.util.Scanner;
+
+		/**
+		 * PRUEBAS
+		 * 
+		 * 1. Valor introducido: f
+		 * Respuesta esperada: Error, valor no válido
+		 *					   Dime un número entre 0 y 20:
+		 * Respuesta final: Error, valor no válido
+		 *					Dime un número entre 0 y 20:
+		 * 
+		 * 2. Valor introducido: 34
+		 * Respuesta esperada: Dime un número entre 0 y 20:
+		 * Respuesta final: Dime un número entre 0 y 20:
+		 * 
+		 * 3. Valor introducido: 5 
+		 * Respuesta esperada: 1
+		 *				   	   22
+		 *					   333
+		 *					   4444
+		 *					   55555
+		 * Respuesta final: 1
+		 *					22
+		 *					333
+		 *					4444
+		 *				    55555
+		 * 
+		 **/
 
 public class Ejercicio6 {
 
